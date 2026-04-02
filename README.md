@@ -1,20 +1,38 @@
 # 🤖 AI Auto Chat Reply Bot
 
-An AI-powered desktop automation bot that reads chat messages from a browser-based chat app and automatically replies using a Groq-hosted LLM.
+An **AI-powered desktop automation bot** that reads messages from a browser-based chat application (like WhatsApp Web) and automatically replies using a **Groq-hosted LLM**. The bot detects new incoming messages from a specific person and responds intelligently, simulating human-like conversation.
 
-The bot detects whether the **last message is from the other person** and replies only once, preventing infinite loops. It uses PyAutoGUI to simulate mouse and keyboard actions and the Groq API for free AI responses (no OpenAI key required).
+---
 
-## Features
-- Auto-detects new incoming messages
-- Replies only when the sender is not the bot
-- Uses Groq LLM (free tier)
-- Screen-coordinate based automation
-- Built-in PyAutoGUI fail-safe
+## ✨ Features
 
-## Tech Stack
-Python, PyAutoGUI, Pyperclip, Groq API
+- Automatically detects the **last message sender**
+- Replies only to **new messages from the other person** to avoid loops
+- Uses **Groq LLM** (free alternative to OpenAI)
+- Fully automated mouse and keyboard actions via **PyAutoGUI**
+- Clipboard-based chat extraction using **Pyperclip**
+- Built-in **failsafe** for emergency stopping (move mouse to any screen corner)
+- Easy to **customize screen coordinates** and sender name
 
-## Usage
-Update screen coordinates in `config.py`, add your Groq API key, and run `main.py`.
+---
 
-⚠️ For educational and personal automation purposes only.
+## 🛠️ Tech Stack
+
+- **Python 3** – main programming language  
+- **PyAutoGUI** – simulates mouse and keyboard actions  
+- **Pyperclip** – copies and pastes chat text from clipboard  
+- **Groq Python SDK** – AI-powered chat responses  
+- **LLama 3.x models** hosted on Groq  
+
+---
+
+## 📂 Project Structure
+
+```text
+aiautochat/
+│
+├── main.py        # Main bot loop: automates reading and replying
+├── groq_ai.py     # Interacts with Groq API to get AI replies
+├── utils.py       # Message parsing & reply logic
+├── config.py      # Screen coordinates and delay settings
+└── README.md      # This file
