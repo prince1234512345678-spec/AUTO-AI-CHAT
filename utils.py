@@ -18,5 +18,4 @@ def should_reply(chat_log, my_name):
         return False
 
     print("🧠 Last sender detected:", last_sender)
-
     return last_sender.lower() != my_name.lower()

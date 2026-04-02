@@ -1,3 +1,4 @@
+
 import time
 import pyautogui
 import pyperclip
@@ -39,6 +40,5 @@ while True:
         time.sleep(0.5)
         pyautogui.hotkey("ctrl", "v")
         pyautogui.press("enter")
-
     else:
         print("⏸ Last message is mine, skipping")

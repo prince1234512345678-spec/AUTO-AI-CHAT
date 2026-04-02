@@ -23,5 +23,4 @@ def get_ai_reply(chat_history: str) -> str:
             {"role": "user", "content": chat_history}
         ]
     )
-
     return completion.choices[0].message.content.strip()
